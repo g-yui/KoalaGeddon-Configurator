@@ -17,6 +17,7 @@ A extremely simple configuration tool for @acidicoala 's Koalageddon.
 - The following features are planned for the Qt Release:
 > - Better performance
 > - Better feedback to the user
+> - View current values
 > - Support for themes and translations (since it's relatively easy to do) <br />
 > - Origin/EA Desktop search (via the [entitlements.json](https://github.com/acidicoala/public-entitlements/blob/main/origin/v1/entitlements.json) file) <br />
 > - Known Uplay entitlements (via the [products.jsonc](https://github.com/acidicoala/public-entitlements/blob/main/ubisoft/v1/products.jsonc) file) <br />
