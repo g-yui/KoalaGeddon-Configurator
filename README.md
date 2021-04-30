@@ -37,3 +37,4 @@ A extremely simple configuration tool for @acidicoala 's Koalageddon.
 
 # Acknowledgments
 - Acidicoala for the creation of such a great tool and the immense help provided for the betterment of this one.
+- What's up Jeddunk ;)
