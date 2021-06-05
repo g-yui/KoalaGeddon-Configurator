@@ -32,9 +32,10 @@ A extremely simple configuration tool for @acidicoala 's Koalageddon.
 - Rather slugish at times.
 
 # Requirements/Licences
-- Pillow, licensed under the open source HPND License.
-- TtkThemes, licensed under a GNU GPLv3 compatible License.
-- Requests, licensed under the Apache Software License (Apache 2.0).
+- Pillow, licensed under the open source HPND license.
+- TtkThemes, licensed under a GNU GPLv3 compatible license.
+- Requests, licensed under the Apache Software license (Apache 2.0).
+- JsoncParser, licensed under the MIT license.
 
 # Acknowledgments
 - Acidicoala for the creation of such a great tool and the immense help provided for the betterment of this one.
