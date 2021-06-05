@@ -3,6 +3,7 @@ import os
 import winreg
 import pathlib
 import json
+from jsonc_parser.parser import JsoncParser
 import requests
 from tkinter import *
 from tkinter import ttk
@@ -249,43 +250,25 @@ class json_file:  # This is the config file itself, it's handling, backup, etc.
     @staticmethod
     def error_handling():  # To deal with comments if they exist, because while the nlohmann JSON library can parse
         # them, the common JSON libraries for Python cannot.
-        with open(paths.get_json_path(), "r") as f:
-            data_raw = f.read()
-            # This is some really ugly code, it just removes all comments, there's probably a better way to do this :(
-            data = data_raw.replace("// DO NOT EDIT THIS VALUE", "").replace("// Get App ID from SteamDB", "").replace(
-                "// Alien Breed: Impact - PL Check [Do not force polish language]", "").replace("// Darkness II Low "
-                                                                                                "Violence [Do not "
-                                                                                                "censor violence]",
-                                                                                                "").replace(
-                "// Get DLC ID from ScreamDB", "").replace("// A "
-                                                           "Total War Sage: TROY [It actually asks this ID...]",
-                                                           "").replace("// Use ItemId from Unlocker32.Origin"
-                                                                       ".log", "").replace(
-                '// "SIMS4.OFF.SOLP.0x0000000000030553" // Sims 4: Get Famous [Better stay '
-                'anonymous]', "").replace("// Ubisoft games unload the Unlocker DLL :(", "").replace("// Unreal Engine",
-                                                                                                     "").replace(
-                "// Origin integration with other stores", "").replace("// Ubisoft integration with "
-                                                                       "other stores", "").replace("// Steam",
-                                                                                                   "").replace(
-                "// Origin", "").replace("// Ubisoft", "").replace("// Use aUplayId from the generated log file", "").\
-                replace("// Use productId from Unlocker64.EADesktop.log", "").replace("// EA Desktop", "")
-            return data
+        file = paths.get_json_path()
+        data = JsoncParser.parse_file(file)
+        return data
 
     @staticmethod
     def fixed_json():  # Called by error handler
-        data_raw = json_file.error_handling()
-        data = json.loads(data_raw)
+        data = json_file.error_handling()
         return data
 
     @staticmethod
     def get_data():  # A basic way to get the json data
+        import jsonc_parser.errors
         try:
-            with open(paths.get_json_path(), "rt") as f:
-                data_raw = f.read()
-                data = json.loads(data_raw)
+            file = paths.get_json_path()
+            data = JsoncParser.parse_file(file)
 
-        except json.decoder.JSONDecodeError:  # Comments were found.
-            data = json_file.fixed_json()
+        except jsonc_parser.errors.ParserError:  # Comments were found.
+            print("Something went horribly wrong")
+            sys.exit("Parse error")
         return data
 
     @staticmethod
