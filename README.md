@@ -25,6 +25,7 @@ A extremely simple configuration tool for @acidicoala 's Koalageddon.
 > - Epic Store search (help needed understanding GraphQL with Python for this one) <br />
 > - A Koalageddon update checker (will make a check by downloading the latest Config.jsonc to see if there's a change between the versions of the local config_version variable, after that it will delete the file and prompt to install if appropriate) <br />
 > - unlock_dlc support for steam <br />
+> - Better error handling <br />
 > - Ignore and terminate options if "Advance options" boolean is enabled via custom config file for this GUI :) <br />
 
 # Known bugs
