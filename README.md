@@ -9,7 +9,8 @@ A extremely simple configuration tool for @acidicoala 's Koalageddon.
 - Pictures bloody everywhere 😄
 
 # Installation/Usage
-- Just download and run the compiled binaries from [here](https://github.com/g-yui/KoalaGeddon-Configurator/releases).
+- Install Koalageddon and run it at least once, this will create the Config file that this GUI modifies.
+- Download and run the compiled binaries for the GUI from [here](https://github.com/g-yui/KoalaGeddon-Configurator/releases).
 - You can run from source without the need for a specific pyenv, just use pip to install the requirements via either pipfile or requirements.txt and then run main.py.
 
 # Plans for the future
