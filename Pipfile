@@ -1,0 +1,15 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+ttkthemes = "~=3.2.2"
+requests = "~=2.25.1"
+jsonc-parser = "~=1.1.5"
+Pillow = ">=8.2.0"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
