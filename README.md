@@ -10,7 +10,7 @@ A extremely simple configuration tool for @acidicoala 's Koalageddon.
 
 # Installation/Usage
 - Just download and run the compiled binaries from [here](https://github.com/g-yui/KoalaGeddon-Configurator/releases).
-- You can run from source without the need for a specific pyenv, just use pip to install requirements.txt and then run main.py.
+- You can run from source without the need for a specific pyenv, just use pip to install the requirements via either pipfile or requirements.txt and then run main.py.
 
 # Plans for the future
 - Since this has somehow managed to get into the releases section I'm planning a complete reformatting of the code, and a change from Tkinter to PyQt5, which would make the whole GUI part look and function better, plus refactor the scripts to make them more ordered, way more than having just a single main.py file :)
