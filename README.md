@@ -14,6 +14,7 @@ A extremely simple configuration tool for @acidicoala 's Koalageddon.
 - You can run from source without the need for a specific pyenv, just use pip to install the requirements via either pipfile or requirements.txt and then run main.py.
 
 # Plans for the future
+> - If you're wondering about the progress of the qt release, I've been rather busy, so probably not anytime soon, I'll still be fixing any bugs that get reported though. Thanks for using this small GUI!
 - Since this has somehow managed to get into the releases section I'm planning a complete reformatting of the code, and a change from Tkinter to PyQt5, which would make the whole GUI part look and function better, plus refactor the scripts to make them more ordered, way more than having just a single main.py file :)
 - The following features are planned for the Qt Release:
 > - Better performance
